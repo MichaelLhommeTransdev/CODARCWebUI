@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +18,9 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     AppComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
 
@@ -23,6 +28,7 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: fr },
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent]
 })
