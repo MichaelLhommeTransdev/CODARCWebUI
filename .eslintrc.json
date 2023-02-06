@@ -42,5 +42,9 @@
       ],
       "rules": {}
     }
-  ]
+  ],
+
+  "rules": {
+    // Override rules here
+  }
 }
