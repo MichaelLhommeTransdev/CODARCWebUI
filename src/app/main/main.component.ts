@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DocumentationStoreService } from './stores/documentation-store.service';
+import { DocumentationStore } from './stores/documentation-store.service';
 
 @Component({
   selector: 'app-main',
@@ -8,7 +8,7 @@ import { DocumentationStoreService } from './stores/documentation-store.service'
 })
 export class MainComponent {
   
-  constructor(protected documentationStore: DocumentationStoreService) {
+  constructor(protected documentationStore: DocumentationStore) {
   }
   
 

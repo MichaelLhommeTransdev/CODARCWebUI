@@ -5,7 +5,7 @@ import { Documentation, DocumentationTheme } from '../models/documentation';
 @Injectable({
   providedIn: 'root'
 })
-export class DocumentationStoreService {
+export class DocumentationStore {
   
   private _themes: BehaviorSubject<DocumentationTheme[]> = new BehaviorSubject([] as DocumentationTheme[]);
   public readonly themes: Observable<DocumentationTheme[]> = this._themes.asObservable();
